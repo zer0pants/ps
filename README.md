@@ -4,8 +4,8 @@
 
 - Clone or copy this project to your machine
 - `$ composer install` - Install dependencies
-- `cp .env.example .env` - Create .env from example base
-- Update `.env` to hit your local database connection. See below for specific instructions
+- `$ cp .env.example .env` - Create .env from example base
+- Update `.env` to hit your local database connection. *See below for specific instructions*
 - `$ php artisan migrate` - Run migration
 - `$ php artisan serve` - Serve the app and enjoy!
 

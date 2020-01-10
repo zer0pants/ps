@@ -37,4 +37,7 @@
             </div>
         </div>
     </body>
+    <footer style="position: absolute; bottom: 0;">
+        Mike Roberts - 10th of January 2020
+    </footer>
 </html>
