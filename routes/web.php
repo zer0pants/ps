@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', 'SubmissionsController@create')->name('submissions::create');
-Route::get('/submissions', 'SubmissionsController@index')->name('submissions::index');
-Route::post('/submissions', 'SubmissionsController@store')->name('submissions::store');
+Route::get('/', 'SubmissionsController@create')->name('submissions.create');
+Route::get('/submissions', 'SubmissionsController@index')->name('submissions.index');
+Route::post('/submissions', 'SubmissionsController@store')->name('submissions.store');
