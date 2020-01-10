@@ -12,7 +12,7 @@
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">PropertySafe Test</a>
+            <a class="navbar-brand" href="/">PropertySafe Test</a>
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -28,6 +28,7 @@
                 </ul>
             </div>
         </nav>
+        <br>
         <div class="container">
             <div class="row">
                 <div class="col">

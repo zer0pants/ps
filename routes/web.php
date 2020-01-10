@@ -14,3 +14,5 @@
 Route::get('/', 'SubmissionsController@create')->name('submissions.create');
 Route::get('/submissions', 'SubmissionsController@index')->name('submissions.index');
 Route::post('/submissions', 'SubmissionsController@store')->name('submissions.store');
+Route::get('/submissions/response/{submission}', 'SubmissionsController@response')->name('submissions.response');
+Route::get('/submissions/{submission}', 'SubmissionsController@show')->name('submissions.show');

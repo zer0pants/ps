@@ -2,16 +2,24 @@
 
 namespace App\Http\Controllers;
 
+use App\Submission;
 use Illuminate\Http\Request;
 
 class SubmissionsController extends Controller
 {
     public function index()
     {
-        $submissions = [];
+        $submissions = Submission::all();
 
         return view('submissions.index', [
             'submissions' => $submissions,
+        ]);
+    }
+
+    public function show(Request $request, Submission $submission)
+    {
+        return view('submissions.show', [
+            'submission' => $submission
         ]);
     }
 
@@ -32,9 +40,21 @@ class SubmissionsController extends Controller
             'description_long'  => 'required',                                      // It's unclear from the spec if this should be a required field, so marking as such just in case
         ]);
 
-        // TODO - create model and store model. Pass to the view.
+        $submission = new Submission($request->except('_token'));
+        $submission->save();
+        
+        return redirect()
+            ->route('submissions.response', ['submission' => $submission]);
+    }
+
+    public function response(Request $request, Submission $submission)
+    {
+        
+        // $submission = Submission::where('id', $submission)->first();
+        // dd($submission);    
+
         return view('submissions.response', [
-            'data' => $request->except('_token'),
+            'submission' => $submission
         ]);
     }
 }

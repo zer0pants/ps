@@ -2,5 +2,14 @@
 @extends('layout')
 
 @section('content')
-    <h1>SUBMISSIONS</h1>
+    
+    <h1>Submission</h1>
+    <p>Submitted at {{ $submission->created_at }}</p>
+
+    <h3>👷‍♂️This feature is coming soon!</h3>
+
+    <div>
+        <a href="{{ route('submissions.create') }}">Create another &rarr;</a><br>
+        <a href="{{ route('submissions.index') }}">View all &rarr;</a>
+    </div>
 @endsection
