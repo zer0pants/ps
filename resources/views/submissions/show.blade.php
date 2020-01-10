@@ -8,6 +8,10 @@
 
     <h3>👷‍♂️This feature is coming soon!</h3>
 
+    <pre>
+        {{ print_r($submission->toArray(), true)}}
+    </pre>
+
     <div>
         <a href="{{ route('submissions.create') }}">Create another &rarr;</a><br>
         <a href="{{ route('submissions.index') }}">View all &rarr;</a>

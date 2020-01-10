@@ -7,13 +7,8 @@
     <br>
     <div class="card bg-light">
         <div class="card-body">
-            <h2>{{ $submission->name }}</h2>
-            <ul>
-                <li>{{ $submission->email }}</li>
-                <li>{{ $submission->phone }}</li>
-                <li>{{ $submission->mobile }}</li>
-                <li>{{ $submission->address }}</li>
-            </ul>
+            <h3>{{ $submission->name }}</h2>
+            <p>{{ $submission->email }}</p>
             <p>Thank you for your submission. We'll be in contact with you shortly.</p>
         </div>
     </div>

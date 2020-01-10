@@ -49,10 +49,6 @@ class SubmissionsController extends Controller
 
     public function response(Request $request, Submission $submission)
     {
-        
-        // $submission = Submission::where('id', $submission)->first();
-        // dd($submission);    
-
         return view('submissions.response', [
             'submission' => $submission
         ]);
