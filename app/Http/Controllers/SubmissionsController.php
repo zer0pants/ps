@@ -8,7 +8,11 @@ class SubmissionsController extends Controller
 {
     public function index()
     {
-        // TODO return tables of submissions from the database
+        $submissions = [];
+
+        return view('submissions.index', [
+            'submissions' => $submissions,
+        ]);
     }
 
     public function show()
@@ -23,6 +27,18 @@ class SubmissionsController extends Controller
 
     public function store(Request $request)
     {
-        // TODO validate and store the submission
+        dd($request->all());
+
+        $this->validate($request, [
+            'name'              => '',
+            'email'             => '',
+            'phone'             => '',
+            'mobile'            => '',
+            'address'           => '',
+            'description_short' => '',
+            'description_long'  => '',
+        ]);
+
+        return view('submissions.response');
     }
 }

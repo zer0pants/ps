@@ -2,5 +2,5 @@
 @extends('layout')
 
 @section('content')
-    <h1>CREATE!</h1>
+    <h1>SUBMISSIONS</h1>
 @endsection
